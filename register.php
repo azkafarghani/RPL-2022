@@ -22,6 +22,10 @@ if(isset($_POST["register"])){
 <form action="" method="post">
     <ul>
         <li>
+        <label for="nama_user">Nama: </label>
+            <input type="text" name="nama_user" id="nama_user">
+        </li>
+        <li>
             <label for="username">username: </label>
             <input type="text" name="username" id="username">
         </li>
