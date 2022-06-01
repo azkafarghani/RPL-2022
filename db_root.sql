@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2022 at 06:09 PM
--- Server version: 10.4.16-MariaDB
--- PHP Version: 7.3.24
+-- Waktu pembuatan: 01 Jun 2022 pada 09.51
+-- Versi server: 10.4.21-MariaDB
+-- Versi PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_bacaan`
+-- Struktur dari tabel `tbl_bacaan`
 --
 
 CREATE TABLE `tbl_bacaan` (
@@ -38,18 +38,28 @@ CREATE TABLE `tbl_bacaan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_kategori`
+-- Struktur dari tabel `tbl_kategori`
 --
 
 CREATE TABLE `tbl_kategori` (
   `id_kategori` int(11) NOT NULL,
-  `nama_kategori` varchar(50) NOT NULL
+  `nama_kategori` enum('Romance','Action','Sci-fi','Adult') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbl_kategori`
+--
+
+INSERT INTO `tbl_kategori` (`id_kategori`, `nama_kategori`) VALUES
+(4, 'Romance'),
+(5, 'Action'),
+(6, 'Sci-fi'),
+(7, 'Adult');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_user`
+-- Struktur dari tabel `tbl_user`
 --
 
 CREATE TABLE `tbl_user` (
@@ -61,16 +71,22 @@ CREATE TABLE `tbl_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_user`
+-- Dumping data untuk tabel `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`id_user`, `nama_user`, `username`, `password`, `level`) VALUES
-(1, 'Azka ', 'admin', 'admin', 'admin');
+(1, 'Azka ', 'admin', 'admin', 'admin'),
+(2, 'Azka User', 'labalaba', 'labauser', 'user'),
+(3, 'Azka User3', 'laba2', '123', 'user'),
+(5, 'Azka User3', 'userrr', '123', 'user'),
+(6, 'Azka User3', 'userrrr', '123', 'user'),
+(7, 'Azka User4', 'iudahj', '123', 'user'),
+(8, 'Azka User4', 'asda', '123', 'user');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_user_kategori`
+-- Struktur dari tabel `tbl_user_kategori`
 --
 
 CREATE TABLE `tbl_user_kategori` (
@@ -83,7 +99,7 @@ CREATE TABLE `tbl_user_kategori` (
 --
 
 --
--- Indexes for table `tbl_bacaan`
+-- Indeks untuk tabel `tbl_bacaan`
 --
 ALTER TABLE `tbl_bacaan`
   ADD PRIMARY KEY (`id_bacaan`),
@@ -91,53 +107,54 @@ ALTER TABLE `tbl_bacaan`
   ADD KEY `fk_bacaan_kategori` (`id_kategori`);
 
 --
--- Indexes for table `tbl_kategori`
+-- Indeks untuk tabel `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
--- Indexes for table `tbl_user`
+-- Indeks untuk tabel `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`id_user`),
+  ADD UNIQUE KEY `username_unique` (`username`);
 
 --
--- Indexes for table `tbl_user_kategori`
+-- Indeks untuk tabel `tbl_user_kategori`
 --
 ALTER TABLE `tbl_user_kategori`
   ADD PRIMARY KEY (`id_user`,`id_kategori`),
   ADD KEY `fk_user_kategori_kategori` (`id_kategori`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `tbl_kategori`
+-- AUTO_INCREMENT untuk tabel `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `tbl_user`
+-- AUTO_INCREMENT untuk tabel `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `tbl_bacaan`
+-- Ketidakleluasaan untuk tabel `tbl_bacaan`
 --
 ALTER TABLE `tbl_bacaan`
   ADD CONSTRAINT `fk_bacaan_kategori` FOREIGN KEY (`id_kategori`) REFERENCES `tbl_kategori` (`id_kategori`),
   ADD CONSTRAINT `fk_bacaan_user` FOREIGN KEY (`id_user`) REFERENCES `tbl_user` (`id_user`);
 
 --
--- Constraints for table `tbl_user_kategori`
+-- Ketidakleluasaan untuk tabel `tbl_user_kategori`
 --
 ALTER TABLE `tbl_user_kategori`
   ADD CONSTRAINT `fk_user_kategori_kategori` FOREIGN KEY (`id_kategori`) REFERENCES `tbl_kategori` (`id_kategori`),
