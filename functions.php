@@ -8,6 +8,11 @@ function register($data) {
     $password = mysqli_real_escape_string($conn, $data["password"]);
     $password2 = mysqli_real_escape_string($conn, $data["password2"]);
     
+    $cek_username = mysqli_query($conn, "SELECT username FROM tbl_user WHERE username = '$username'");
+    if(mysqli_fetch_assoc($cek_username)){
+        echo "<script>alert('username sudah terdaftar')</script>";
+        return false;
+    }
     
     if($password !== $password2) {
         echo "<script>

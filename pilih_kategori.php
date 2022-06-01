@@ -1,21 +1,7 @@
-<?php
-require 'functions.php';
-if(isset($_POST["register"])){
-    if(register($_POST) > 0){
-        echo "<script>
-                alert('user baru berhasil ditambahkan!');
-            </script>";
-        header("location:pilih_kategori.php");
-    }
-    else{
-        echo mysqli_error(($conn));
-    }
-}
-?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Regist</title>
+        <title>Pilih Kategori</title>
 </head>
 
 <body>
@@ -23,19 +9,19 @@ if(isset($_POST["register"])){
 <form action="" method="post">
     <ul>
         <li>
-        <label for="nama_user">Nama: </label>
+        <label for="nama_user">Romance </label>
             <input type="text" name="nama_user" id="nama_user">
         </li>
         <li>
-            <label for="username">username: </label>
+            <label for="username">Action </label>
             <input type="text" name="username" id="username">
         </li>
         <li>
-        <label for="password">password: </label>
+        <label for="password">Sci-fi </label>
             <input type="password" name="password" id="password">
         </li>
         <li>
-        <label for="password2">Konfirmasi password: </label>
+        <label for="password2">Adult </label>
             <input type="password" name="password2" id="password">
         </li>
         <li>
