@@ -24,8 +24,7 @@ if(isset($_POST["favorit"])){
 <form action="" method="post">
 <?php 
         
-        echo $id_user;
-
+        
         $query = mysqli_query($conn,"SELECT * FROM tbl_kategori");
 
         $i = 1;
@@ -36,9 +35,7 @@ if(isset($_POST["favorit"])){
         }
 ?>
         <button type="submit" name="favorit">Submit</button>
-<?php  
-    $query = mysqli_query($conn,"INSERT INTO tbl_user_category(id_user, id_kategori) VALUES (id_user, id_kategori), (id_user, id_kategori), (id_user, id_kategori)");
-?>
+
         
 
 
