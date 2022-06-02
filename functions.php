@@ -37,5 +37,5 @@ function favorit($data){
     foreach ($data['kategori'] as $key) {
         mysqli_query($conn, "INSERT INTO tbl_user_kategori(id_user, id_kategori) VALUES (".$id_user.", ".$key.")");
     }
-    
+    header("location:page_user.php");
 }
