@@ -29,7 +29,7 @@ line-height: 33px;
 .book{
     margin-left: -210px;
     margin-top: 20px;
-    width: 60 px;
+    width: 80px;
     height: 140px;
 }
 .descbook{
@@ -39,7 +39,6 @@ line-height: 33px;
     margin-right: auto;
     padding-left: 100px;
     margin-top: -150px;
-
     font-family: 'Nunito';
 font-style: normal;
 font-weight: 400;
@@ -47,87 +46,6 @@ font-size: 14px;
 line-height: 22px;
 }
 .descbook h1{
-    font-family: 'Nunito';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 27px;
-}
-
-.book2{
-    margin-left: -210px;
-    margin-top: 20px;
-    width: 60 px;
-    height: 140px;}
-.descbook2{
-    width: 180px;
-    text-align: justify;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 100px;
-    margin-top: -150px;
-
-    font-family: 'Nunito';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 22px;
-}
-.descbook2 h1{
-    font-family: 'Nunito';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 27px;
-}
-
-.book3{
-    margin-left: -210px;
-    margin-top: 20px;
-    width: 60 px;
-    height: 140px;}
-.descbook3{
-    width: 180px;
-    text-align: justify;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 100px;
-    margin-top: -150px;
-
-    font-family: 'Nunito';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 22px;
-}
-.descbook3 h1{
-    font-family: 'Nunito';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 27px;
-}
-
-.book4{
-    margin-left: -210px;
-    margin-top: 20px;
-    width: 60 px;
-    height: 140px;}
-.descbook4{
-    width: 180px;
-    text-align: justify;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 100px;
-    margin-top: -150px;
-
-    font-family: 'Nunito';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 22px;
-}
-.descbook4 h1{
     font-family: 'Nunito';
 font-style: normal;
 font-weight: 700;
@@ -165,4 +83,8 @@ margin-bottom: -10px;
 }
 .profile{
     margin-right: 30px;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
 }

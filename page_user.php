@@ -37,33 +37,18 @@
          MYSQLI_ASSOC
     );
 
-    /*
-    for ($i=0; $i < count($kategori_favorit) ; $i++) { 
-        echo "<br>"."<img src=".$kategori_favorit[$i]['gambar']." alt=\"gambar\" width=\"100px\">";
-        echo "<br>".$kategori_favorit[$i]['judul_bacaan'];
-        echo "<br>".$kategori_favorit[$i]['nama_kategori']." ";
-        echo $kategori_favorit[$i]['nama_user']." ";
-    } */         
     
     
     ?>
-    <div class="conten">
+    <a href="bacaan_full.php"><div class="conten">
         <?php  
 
         for ($i=0; $i < count($kategori_favorit) ; $i++) { 
-            // echo "<br>"."<img src=".$kategori_favorit[$i]['gambar']." alt=\"gambar\" width=\"100px\">";
-            // echo "<br>".$kategori_favorit[$i]['judul_bacaan'];
-            // echo "<br>".$kategori_favorit[$i]['nama_kategori']." ";
-            // echo $kategori_favorit[$i]['nama_user']." ";
             echo "<img class=\"book\" src=\"".$kategori_favorit[$i]['gambar']."\" alt=\"\"><div class=\"descbook\"><h1>".$kategori_favorit[$i]['judul_bacaan']."</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>";
         }
 
-        //echo "<img class=\"book\" src=\"C:/Users/Agil Munawar/Documents/GitHub/RPL-2022/TA/coverbook.jpg\" alt=\"\"><div class=\"descbook\"><h1>Pseudonim</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>"
-        //echo "<img class=\"book2\" src=\"C:/Users/Agil Munawar/Documents/GitHub/RPL-2022/TA/coverbook.jpg\" alt=\"\"><div class=\"descbook2\"><h1>Pseudonim</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>"
-        //echo "<img class=\"book3\" src=\"C:/Users/Agil Munawar/Documents/GitHub/RPL-2022/TA/coverbook.jpg\" alt=\"\"><div class=\"descbook3\"><h1>Pseudonim</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>"
-        //echo "<img class=\"book4\" src=\"C:/Users/Agil Munawar/Documents/GitHub/RPL-2022/TA/coverbook.jpg\" alt=\"\"><div class=\"descbook4\"><h1>Pseudonim</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>"
         ?>
-    </div>
+    </div></a>
     <div class="menu-bar">
         <a href="" class="home"><i class="fa-solid fa-house"></i></a> <a href="" class="search"><i class="fa-solid fa-magnifying-glass"></i></a> <a href="" class="post"><i class="fa-solid fa-feather-pointed"></i></a> <a href="" class="fav"><i class="fa-solid fa-star"></i></a> <a href="" class="profile"><i class="fa-solid fa-user"></i></a>
     </div>
