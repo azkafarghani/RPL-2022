@@ -23,6 +23,8 @@ function register($data) {
     
     mysqli_query($conn, "INSERT INTO tbl_user VALUE('', '$nama_user', '$username', '$password', 'user')");
 
+    $id_user =  mysqli_fetch_assoc(mysqli_query($conn, "SELECT id_user FROM tbl_user WHERE username = '$username'"));
+
     //cek apakah berhasil atau tidak
     return mysqli_affected_rows($conn);  
 }

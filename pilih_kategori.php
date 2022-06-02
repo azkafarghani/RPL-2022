@@ -23,6 +23,9 @@ if(isset($_POST["favorit"])){
 
 <form action="" method="post">
 <?php 
+        
+        echo $id_user;
+
         $query = mysqli_query($conn,"SELECT * FROM tbl_kategori");
 
         $i = 1;
