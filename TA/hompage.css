@@ -29,7 +29,7 @@ line-height: 33px;
 .book{
     margin-left: -210px;
     margin-top: 20px;
-    width: 60 px;
+    width: 60px;
     height: 140px;
 }
 .descbook{
@@ -54,11 +54,6 @@ font-size: 20px;
 line-height: 27px;
 }
 
-.book2{
-    margin-left: -210px;
-    margin-top: 20px;
-    width: 60 px;
-    height: 140px;}
 .descbook2{
     width: 180px;
     text-align: justify;
@@ -81,11 +76,6 @@ font-size: 20px;
 line-height: 27px;
 }
 
-.book3{
-    margin-left: -210px;
-    margin-top: 20px;
-    width: 60 px;
-    height: 140px;}
 .descbook3{
     width: 180px;
     text-align: justify;
@@ -95,10 +85,10 @@ line-height: 27px;
     margin-top: -150px;
 
     font-family: 'Nunito';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 22px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
 }
 .descbook3 h1{
     font-family: 'Nunito';
@@ -108,11 +98,6 @@ font-size: 20px;
 line-height: 27px;
 }
 
-.book4{
-    margin-left: -210px;
-    margin-top: 20px;
-    width: 60 px;
-    height: 140px;}
 .descbook4{
     width: 180px;
     text-align: justify;

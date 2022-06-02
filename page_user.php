@@ -57,11 +57,7 @@
             // echo $kategori_favorit[$i]['nama_user']." ";
             echo "<img class=\"book\" src=\"".$kategori_favorit[$i]['gambar']."\" alt=\"\"><div class=\"descbook\"><h1>".$kategori_favorit[$i]['judul_bacaan']."</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>";
         }
-
-        //echo "<img class=\"book\" src=\"C:/Users/Agil Munawar/Documents/GitHub/RPL-2022/TA/coverbook.jpg\" alt=\"\"><div class=\"descbook\"><h1>Pseudonim</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>"
-        //echo "<img class=\"book2\" src=\"C:/Users/Agil Munawar/Documents/GitHub/RPL-2022/TA/coverbook.jpg\" alt=\"\"><div class=\"descbook2\"><h1>Pseudonim</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>"
-        //echo "<img class=\"book3\" src=\"C:/Users/Agil Munawar/Documents/GitHub/RPL-2022/TA/coverbook.jpg\" alt=\"\"><div class=\"descbook3\"><h1>Pseudonim</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>"
-        //echo "<img class=\"book4\" src=\"C:/Users/Agil Munawar/Documents/GitHub/RPL-2022/TA/coverbook.jpg\" alt=\"\"><div class=\"descbook4\"><h1>Pseudonim</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>"
+        
         ?>
     </div>
     <div class="menu-bar">
