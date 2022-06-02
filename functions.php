@@ -28,10 +28,14 @@ function register($data) {
     return mysqli_affected_rows($conn);  
 }
 function favorit($data){
-
+    global $conn;
     foreach ($data['kategori'] as $key) {
         echo $key;
     }
+    $result = mysqli_query($conn,"SELECT MAX(id_user) AS id FROM tbl_user");
+    $row = mysqli_fetch_array($result);
+    echo $row["id"];
+    
 
     // global $conn;
     // $id_user =  mysqli_fetch_assoc(mysqli_query($conn, "SELECT id_user FROM tbl_user WHERE username = 'agilmun12345'"));
