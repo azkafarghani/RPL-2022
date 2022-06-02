@@ -3,9 +3,9 @@ require 'functions.php';
 if(isset($_POST["register"])){
     if(register($_POST) > 0){
         echo "<script>
-                alert('user baru berhasil ditambahkan!');
-            </script>";
-        header("location:pilih_kategori.php");
+        alert('user baru berhasil ditambahkan!');
+        window.location.href='pilih_kategori.php';
+        </script>";
     }
     else{
         echo mysqli_error(($conn));
