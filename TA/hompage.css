@@ -1,0 +1,168 @@
+.all{
+    text-align: center;
+}
+.top{
+    margin-top: 50px;
+}
+.fy{
+    margin-right: 10px;
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+}
+.fol{
+    margin-right: 10px;
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+}
+.pesan{
+    font-size: x-large;
+    text-align: right;
+    margin-left: 70px;
+}
+
+.book{
+    margin-left: -210px;
+    margin-top: 20px;
+    width: 60 px;
+    height: 140px;
+}
+.descbook{
+    width: 180px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+    margin-top: -150px;
+
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 22px;
+}
+.descbook h1{
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 27px;
+}
+
+.book2{
+    margin-left: -210px;
+    margin-top: 20px;
+    width: 60 px;
+    height: 140px;}
+.descbook2{
+    width: 180px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+    margin-top: -150px;
+
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 22px;
+}
+.descbook2 h1{
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 27px;
+}
+
+.book3{
+    margin-left: -210px;
+    margin-top: 20px;
+    width: 60 px;
+    height: 140px;}
+.descbook3{
+    width: 180px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+    margin-top: -150px;
+
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 22px;
+}
+.descbook3 h1{
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 27px;
+}
+
+.book4{
+    margin-left: -210px;
+    margin-top: 20px;
+    width: 60 px;
+    height: 140px;}
+.descbook4{
+    width: 180px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+    margin-top: -150px;
+
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 22px;
+}
+.descbook4 h1{
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 27px;
+}
+
+.menu-bar{
+  height: 100px;
+    background-color: #D9D9D9;
+    width: 305px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+   
+    
+    
+}
+.menu-bar a{
+font-size: x-large;
+margin-bottom: -10px;
+}
+.home{
+    margin-right: 30px;
+    margin-left: 15px;
+}
+.search{
+    margin-right: 30px;
+}
+.post{
+    margin-right: 30px;
+}
+.fav{
+    margin-right: 30px;
+}
+.profile{
+    margin-right: 30px;
+}
