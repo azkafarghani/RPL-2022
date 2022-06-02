@@ -1,0 +1,52 @@
+.choice-fav{
+    text-align: center;
+}
+
+.judul h1{
+    margin-top: 50px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height */
+}
+
+.searchbar input{
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    background-color: #FFBFBF;
+    width: 300px;
+    height: 30px;
+}
+
+.cari{
+    margin-left: 10px;
+}
+
+.rec-search{
+    background-color: #D9D9D9;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 50px;
+}
+
+.req1{
+    margin-left: -250px;
+}
+
+.req2{
+    margin-left: -275px;
+}
+
+.req3{
+    margin-left: -278px;
+}
+
+.req4{
+    margin-left: -269px;
+}
