@@ -25,15 +25,20 @@ if(isset($_POST["favorit"])){
 <?php 
         $query = mysqli_query($conn,"SELECT * FROM tbl_kategori");
 
-        
+        $i = 1;
         while($kategori = mysqli_fetch_assoc($query)) {
-            //echo "<input type=\"hidden\" id=\"id_kategori\" name=\"id_kategori\" value=".$kategori["id_kategori"].">"
-            echo "<label for=\"nama_kategori\">".$kategori['nama_kategori']."</label>";
-            echo "<input type=\"checkbox\" name=\"nama_kategori\ " id=\"nama_kategori\" value=".$kategori["id_kategori"]."><br>";
+            echo "<label for=\"kategori".$i."\">".$kategori['nama_kategori']."</label>";
+            echo "<input type=\"checkbox\" name=\"kategori".$i."\" id=\"kategori".$i."\" value=".$kategori["id_kategori"]."><br>";
+            $i++;
         }
-    ?>
-            <button type="submit" name="favorit">Submit 
-            </button>
+?>
+        <button type="submit" name="favorit">Submit</button>
+<?php  
+    $query = mysqli_query($conn,"INSERT INTO tbl_user_category(id_user, id_kategori) VALUES (id_user, id_kategori), (id_user, id_kategori), (id_user, id_kategori)");
+?>
+        
+
+
 
 </form>
 </body>
