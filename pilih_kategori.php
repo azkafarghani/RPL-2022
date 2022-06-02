@@ -27,11 +27,9 @@ if(isset($_POST["favorit"])){
         
         $query = mysqli_query($conn,"SELECT * FROM tbl_kategori");
 
-        $i = 1;
         while($kategori = mysqli_fetch_assoc($query)) {
-            echo "<label for=\"kategori".$i."\">".$kategori['nama_kategori']."</label>";
-            echo "<input type=\"checkbox\" name=\"kategori".$i."\" id=\"kategori".$i."\" value=".$kategori["id_kategori"]."><br>";
-            $i++;
+            echo "<label for=\"kategori\">".$kategori['nama_kategori']."</label>";
+            echo "<input type=\"checkbox\" name=\"kategori[]\" id=\"kategori\" value=".$kategori["id_kategori"]."><br>";
         }
 ?>
         <button type="submit" name="favorit">Submit</button>
