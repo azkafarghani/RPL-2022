@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Halaman Pimpinan</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="TA/hompage.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/be9c77a153.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Halaman Pengguna Biasa</h1>
-
-    <h1>Ini halaman user</h1>
-    
+    <div class="all">
+    <div class="top">
+        <a href="#" class="fy">For you</a><a href="#" class="fol">Following</a><a href="#" class="pesan"><i class="fa-solid fa-comment-dots"></i></a>
+    </div>
     <?php
     require 'koneksi.php';
     session_start();
@@ -31,32 +37,36 @@
          MYSQLI_ASSOC
     );
 
-    
-
-    // foreach( $kategori_favorit as $row ){
-    //     foreach( $row as $col ){
-    //         echo $col." ";
-    //     }
-    //     echo "<br>";
-    // }
-
+    /*
     for ($i=0; $i < count($kategori_favorit) ; $i++) { 
         echo "<br>"."<img src=".$kategori_favorit[$i]['gambar']." alt=\"gambar\" width=\"100px\">";
         echo "<br>".$kategori_favorit[$i]['judul_bacaan'];
         echo "<br>".$kategori_favorit[$i]['nama_kategori']." ";
         echo $kategori_favorit[$i]['nama_user']." ";
-    }
-
-    // print_r($kategori_favorit);
-    // echo "<br>".$kategori_favorit[1]['judul_bacaan']."<br>";
-    // echo count($kategori_favorit);
-        
-    
+    } */         
     
     
     ?>
-    <br/>
-    <br/>
+    <div class="conten">
+        <?php  
 
+        for ($i=0; $i < count($kategori_favorit) ; $i++) { 
+            // echo "<br>"."<img src=".$kategori_favorit[$i]['gambar']." alt=\"gambar\" width=\"100px\">";
+            // echo "<br>".$kategori_favorit[$i]['judul_bacaan'];
+            // echo "<br>".$kategori_favorit[$i]['nama_kategori']." ";
+            // echo $kategori_favorit[$i]['nama_user']." ";
+            echo "<img class=\"book\" src=\"".$kategori_favorit[$i]['gambar']."\" alt=\"\"><div class=\"descbook\"><h1>".$kategori_favorit[$i]['judul_bacaan']."</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>";
+        }
+
+        //echo "<img class=\"book\" src=\"C:/Users/Agil Munawar/Documents/GitHub/RPL-2022/TA/coverbook.jpg\" alt=\"\"><div class=\"descbook\"><h1>Pseudonim</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>"
+        //echo "<img class=\"book2\" src=\"C:/Users/Agil Munawar/Documents/GitHub/RPL-2022/TA/coverbook.jpg\" alt=\"\"><div class=\"descbook2\"><h1>Pseudonim</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>"
+        //echo "<img class=\"book3\" src=\"C:/Users/Agil Munawar/Documents/GitHub/RPL-2022/TA/coverbook.jpg\" alt=\"\"><div class=\"descbook3\"><h1>Pseudonim</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>"
+        //echo "<img class=\"book4\" src=\"C:/Users/Agil Munawar/Documents/GitHub/RPL-2022/TA/coverbook.jpg\" alt=\"\"><div class=\"descbook4\"><h1>Pseudonim</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>"
+        ?>
+    </div>
+    <div class="menu-bar">
+        <a href="" class="home"><i class="fa-solid fa-house"></i></a> <a href="" class="search"><i class="fa-solid fa-magnifying-glass"></i></a> <a href="" class="post"><i class="fa-solid fa-feather-pointed"></i></a> <a href="" class="fav"><i class="fa-solid fa-star"></i></a> <a href="" class="profile"><i class="fa-solid fa-user"></i></a>
+    </div>
+    </div>
 </body>
 </html>
