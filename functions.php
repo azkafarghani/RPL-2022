@@ -28,11 +28,14 @@ function register($data) {
     return mysqli_affected_rows($conn);  
 }
 function favorit($data){
-    global $conn;
-    $id_user =  mysqli_fetch_assoc(mysqli_query($conn, "SELECT id_user FROM tbl_user WHERE username = 'agilmun12345'"));
-    echo $id_user[0];
+
+    foreach ($data['kategori'] as $key) {
+        echo $key;
+    }
+
+    // global $conn;
+    // $id_user =  mysqli_fetch_assoc(mysqli_query($conn, "SELECT id_user FROM tbl_user WHERE username = 'agilmun12345'"));
+    // echo $id_user[0];
    // mysqli_query($conn, "INSERT INTO tbl_user_kategori VALUE('', '$nama_user', '$username', '$password', 'user')");
     
 }
-
-
