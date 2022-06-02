@@ -31,12 +31,19 @@ function register($data) {
 }
 function favorit($data){
     global $conn;
+<<<<<<< HEAD
     session_start();
     $id = mysqli_fetch_assoc(mysqli_query($conn, "SELECT id_user FROM tbl_user WHERE username = '".$_SESSION['username']."'"));
     $id_user = $id['id_user'];
+=======
+>>>>>>> a71314fbc953d3af75937ecc2e2e6d85d08ab38a
     foreach ($data['kategori'] as $key) {
         mysqli_query($conn, "INSERT INTO tbl_user_kategori(id_user, id_kategori) VALUES (".$id_user.", ".$key.")");
     }
+    $result = mysqli_query($conn,"SELECT MAX(id_user) AS id FROM tbl_user");
+    $row = mysqli_fetch_array($result);
+    echo $row["id"];
+    
 
   
     

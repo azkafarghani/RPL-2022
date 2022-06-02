@@ -1,0 +1,90 @@
+.form {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.judul h1 {
+    margin-left: -160px;
+    margin-top: 80px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 55px;
+}
+
+.email{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    margin-left: -245px;
+}
+
+.name {
+    margin-top: 20px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    margin-left: -210px;
+}
+
+.username{
+    margin-top: 20px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    margin-left: -210px;
+}
+
+.password{
+    margin-top: 20px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    margin-left: -210px;
+}
+.inp-email {
+    border-bottom: 1px solid;
+    width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inp-email input{
+    margin-top: 10px;
+    font-size: x-small;
+    margin-left: -155px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.button button{
+    margin-top: 20px;
+    width: 280px;
+    height: 56px;
+    left: 44px;
+    top: 539px;
+    border: none;
+    background-color: #FF517B;
+    border-radius: 8px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.syarat{
+    margin-left: -20px;
+    margin-top: 30px;
+}
+
+.quest{
+    margin-left: -100px;
+    margin-top: 20px;
+}
