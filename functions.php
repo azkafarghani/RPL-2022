@@ -1,10 +1,12 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "db_root");
+
 function register($data) {
     global $conn;
-
+    session_start();
     $nama_user = stripslashes($data["nama_user"]);
     $username = strtolower(stripslashes($data["username"]));
+    $_SESSION['username'] = $username;
     $password = mysqli_real_escape_string($conn, $data["password"]);
     $password2 = mysqli_real_escape_string($conn, $data["password2"]);
     
@@ -28,14 +30,14 @@ function register($data) {
     return mysqli_affected_rows($conn);  
 }
 function favorit($data){
-
+    global $conn;
+    session_start();
+    $id = mysqli_fetch_assoc(mysqli_query($conn, "SELECT id_user FROM tbl_user WHERE username = '".$_SESSION['username']."'"));
+    $id_user = $id['id_user'];
     foreach ($data['kategori'] as $key) {
-        echo $key;
+        mysqli_query($conn, "INSERT INTO tbl_user_kategori(id_user, id_kategori) VALUES (".$id_user.", ".$key.")");
     }
 
-    // global $conn;
-    // $id_user =  mysqli_fetch_assoc(mysqli_query($conn, "SELECT id_user FROM tbl_user WHERE username = 'agilmun12345'"));
-    // echo $id_user[0];
-   // mysqli_query($conn, "INSERT INTO tbl_user_kategori VALUE('', '$nama_user', '$username', '$password', 'user')");
+  
     
 }
