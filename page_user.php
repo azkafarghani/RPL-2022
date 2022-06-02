@@ -22,7 +22,8 @@
      
     $kategori_favorit = mysqli_fetch_all(
          mysqli_query($conn, 
-         "SELECT tblb.gambar,
+         "SELECT tblb.id_bacaan,
+                 tblb.gambar,
                  tblb.judul_bacaan,
                  tblk.nama_kategori,
                  tblu.nama_user
@@ -40,15 +41,21 @@
     
     
     ?>
-    <a href="bacaan_full.php"><div class="conten">
+    <!-- <?php echo "<a href=\"bacaan_full.php?id_bacaan=".$kategori_favorit[0]['id_bacaan']."\">"  ?> -->
+    <div class="conten">
         <?php  
 
         for ($i=0; $i < count($kategori_favorit) ; $i++) { 
-            echo "<img class=\"book\" src=\"".$kategori_favorit[$i]['gambar']."\" alt=\"\"><div class=\"descbook\"><h1>".$kategori_favorit[$i]['judul_bacaan']."</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel </div>";
+            echo "<a href=\"bacaan_full.php?id_bacaan=".$kategori_favorit[$i]['id_bacaan']."\">
+                    <img class=\"book\" src=\"".$kategori_favorit[$i]['gambar']."\" alt=\"\">
+                    <div class=\"descbook\">
+                        <h1>".$kategori_favorit[$i]['judul_bacaan']."</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel 
+                    </div>";
         }
+        // print_r($kategori_favorit);
 
         ?>
-    </div></a>
+    </div><!--</a>-->
     <div class="menu-bar">
         <a href="" class="home"><i class="fa-solid fa-house"></i></a> <a href="" class="search"><i class="fa-solid fa-magnifying-glass"></i></a> <a href="" class="post"><i class="fa-solid fa-feather-pointed"></i></a> <a href="" class="fav"><i class="fa-solid fa-star"></i></a> <a href="" class="profile"><i class="fa-solid fa-user"></i></a>
     </div>
