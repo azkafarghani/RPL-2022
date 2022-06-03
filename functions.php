@@ -39,3 +39,28 @@ function favorit($data){
     }
     header("location:page_user.php");
 }
+
+function cari($keyword) {
+    global $conn;
+
+    $pencarian = mysqli_fetch_all(
+        mysqli_query($conn, 
+        "SELECT tblb.gambar,
+                tblu.nama_user,
+                tblb.judul_bacaan,
+                tblb.id_bacaan,
+                tblk.nama_kategori
+            FROM tbl_bacaan AS tblb
+            JOIN tbl_kategori AS tblk
+                ON (tblb.id_kategori = tblk.id_kategori) 
+            JOIN tbl_user AS tblu
+                ON (tblb.id_user = tblu.id_user) 
+            WHERE
+            tblk.nama_kategori LIKE '%$keyword%' OR
+            tblb.judul_bacaan LIKE '%$keyword%'
+        "),
+        MYSQLI_ASSOC
+   );
+
+   return $pencarian;
+}
