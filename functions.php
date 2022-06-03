@@ -64,3 +64,9 @@ function cari($keyword) {
 
    return $pencarian;
 }
+
+function compose($id_user, $id_kategori, $judul_bacaan, $konten, $gambar){
+    global $conn;
+
+    mysqli_query($conn, "INSERT INTO tbl_bacaan (id_user, id_kategori, judul_bacaan, konten, gambar) VALUES ($id_user, $id_kategori , '$judul_bacaan', '$konten', '$gambar')");
+}

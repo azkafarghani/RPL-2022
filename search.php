@@ -42,7 +42,7 @@
     </div>
     <?php endif; ?>
     <div class="menu-bar">
-        <a href="" class="home"><i class="fa-solid fa-house"></i></a> <a href="search.php" class="search"><i class="fa-solid fa-magnifying-glass"></i></a> <a href="" class="post"><i class="fa-solid fa-feather-pointed"></i></a> <a href="" class="fav"><i class="fa-solid fa-star"></i></a> <a href="" class="profile"><i class="fa-solid fa-user"></i></a>
+        <a href="page_user.php" class="home"><i class="fa-solid fa-house"></i></a> <a href="search.php" class="search"><i class="fa-solid fa-magnifying-glass"></i></a> <a href="compose.php" class="post"><i class="fa-solid fa-feather-pointed"></i></a> <a href="" class="fav"><i class="fa-solid fa-star"></i></a> <a href="" class="profile"><i class="fa-solid fa-user"></i></a>
     </div>
     </div>
 </body>
