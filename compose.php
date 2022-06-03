@@ -15,7 +15,7 @@
        );
     ?>
 
-    <form action="page_user.php" method="post">
+    <form action="" method="post">
 
         <label for="kategori">Kategori bacaan : </label>
         <select id="kategori" name="kategori">
@@ -58,6 +58,8 @@
                 
 
             compose($id_user, $id_kategori , $judul_bacaan, $konten, $gambar);
+
+            header("location:page_user.php");
         }
     ?>
 </body>
