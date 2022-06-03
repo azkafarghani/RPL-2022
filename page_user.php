@@ -50,7 +50,7 @@
                     <img class=\"book\" src=\"".$kategori_favorit[$i]['gambar']."\" alt=\"\">
                     <div class=\"descbook\">
                         <h1>".$kategori_favorit[$i]['judul_bacaan']."</h1> ipsum dolor sit amet consectetur adipisicing elit. Explicabo cum suscipit assumenda aspernatur vel 
-                    </div>";
+                    </div></a>";
         }
         // print_r($kategori_favorit);
 

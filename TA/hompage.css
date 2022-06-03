@@ -88,3 +88,14 @@ a {
     color: inherit;
     text-decoration: inherit;
 }
+.logo{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.logo img{
+
+    width: 80px;
+    height: 50px;
+}
